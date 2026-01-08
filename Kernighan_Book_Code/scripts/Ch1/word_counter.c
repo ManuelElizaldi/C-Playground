@@ -10,18 +10,15 @@
 
 
 int main () {
-
+    // nb = new blank, nl = new line
     int c, nl, nb, nw, nc, state;
     char word;
     
     state = OUT;
     nl = nw = nc = 0;
 
-    
-
     while((c = getchar()) != EOF){
-        for(word = c, printf("%c", word);
-        
+        printf("%c", c);
             ++nc;
         if (c == '\n')
             ++nl;
