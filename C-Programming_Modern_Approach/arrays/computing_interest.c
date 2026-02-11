@@ -9,17 +9,19 @@ int main(){
 
     printf("Enter interest rate:");
     scanf("%d", &low_rate);
-    printf("Enter number of years");
+    printf("Enter number of years ");
     scanf("%d", &num_years);
 
     printf("\nYears");
 
+    // storing values in array 
     for (i = 0; i < NUM_RATES; i++){
         printf("%6d%%", low_rate + i);
         value[i] = INITIAL_BALANCE;
     }
     printf("\n");
-
+    
+    // 
     for (year = 1; year <= num_years; year++){
         printf("%3d ", year);
         for (i = 0; i < NUM_RATES; i++){
@@ -28,6 +30,12 @@ int main(){
         }
         printf("\n");
     }
-    return 0;
 
+    // if we would want to clear the array
+    for (i = 0; i < NUM_RATES; i++){
+        value[i] = 0;
+    }
+
+
+    return 0;
 }
